@@ -74,9 +74,9 @@ spring:
     hikari:
       maximum-pool-size: 500
       minimum-idle: 50
-    password: "{cipher}ca0e8195df6adf2d57770ee51f3ca2b6ef131e2689e0bb1fec23dfd4685e4a84b2894ba8866e92e5b08dd710ec42c0e9"
+    password: "{cipher}f21bd995c319357cb30d9353b4ce9b93d49f22fdb1c3c894bce2e37931ca3ca9"
     url: "jdbc:sqlserver://localhost:1433;database=Test04-SisVoiceCC;encrypt=true;trustServerCertificate=true"
-    username: "{cipher}b08e462d6649a04c4744cd6ce8a1853936ba48ac3b5f3d6d26dbac7cfe135fa1ce136ec38962cf4aa83e8eabb6d23767"
+    username: "{cipher}a11af0e6d5bca8f9469edbc8c904e76d47ee24023c178e72d4e92bff1ada64f7"
   security:
     oauth2:
       client:
