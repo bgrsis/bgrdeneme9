@@ -1,0 +1,91 @@
+application:
+  microservice-configuration:
+    hazelcast:
+      discovery-mechanism: "{cipher}2b0a9aa7403f0d36051bb1805e46de4f42b13ae950a660348cec51a9c7b5dba6"
+      lite-member:
+        cluster-members: "conversationlogger"
+        instance-port-padding: 5701
+  microservice-role:
+    aggregator: true
+    raw-data: true
+  service-time-configuration:
+    service-time1-lower-bound: 0
+    service-time1-upper-bound: 10
+    service-time2-lower-bound: 10
+    service-time2-upper-bound: 20
+    service-time3-lower-bound: 20
+    service-time3-upper-bound: 30
+    service-time4-lower-bound: 30
+    service-time4-upper-bound: 60
+  task-executor-properties:
+    core-size: 4
+    maximum-size: 6
+    queue-capacity: 1000000
+cron-job:
+  initialize-agent-aggregation-15-min-cron: "0 6/15 * * * ?"
+  initialize-agent-session-aggregation-15-min-cron: "0 4/15 * * * ?"
+  initialize-agent-sub-type-aggregation-15-min-cron: "0 8/15 * * * ?"
+  initialize-queue-aggregation-15-min-cron: "0 7/15 * * * ?"
+eureka:
+  client:
+    service-url:
+      defaultZone: "{cipher}aaa0c00b530f5b70ee8c30c21d09e8d0418066d38046c6de70348e591d41c9a7797209134998c0546029305a58f2787af9c706938c3e534dadf9b6035d8a1088"
+jhipster:
+  security:
+    oauth2:
+      audience:
+      - "account"
+      - "api://default"
+      - "sistas-chatbot"
+      - "sistas-eva"
+      - "sistas-voice"
+kafka:
+  agentMessageTopic: "AGENT_MESSAGE_TOPIC"
+  bootstrap-servers: "localhost:9092"
+  callMessageTopic: "CALL_MESSAGE_TOPIC"
+  consumer:
+    auto.offset.reset: "latest"
+    group.id: "conversation-logger"
+  different-group-id-consumer:
+    auto.offset.reset: "latest"
+    group.id: "conversation-logger-${spring.application.instance-id:${random.value}}"
+  fromConversationLoggerToMediaProcessorTopic: "FROM_CONVERSATION_LOGGER_TO_MEDIA_PROCESSOR_TOPIC"
+  fromMediaProcessorToConversationLoggerTopic: "FROM_MEDIA_PROCESSOR_TO_CONVERSATION_LOGGER_TOPIC"
+  generalMessageTopic: "GENERAL_MESSAGE_TOPIC"
+  sendAckTimeoutSeconds: 10
+  sendRetryDelaySeconds: 2
+  sendRetrySchedulerThreads: 8
+  topics:
+    number-of-partitions: 1
+    replication-factor: 1
+logging:
+  level:
+    ROOT: "DEBUG"
+    com.sistas.cc.conversation.logger: "DEBUG"
+    org.hibernate.SQL.selam: "TRACE"
+    tech.jhipster: "DEBUG"
+not-ready-reason:
+  default-provider: "sisphone"
+server:
+  port: 26083
+spring:
+  cloud.stream.kafka.binder.brokers: "localhost:9092"
+  datasource:
+    hikari:
+      maximum-pool-size: 500
+      minimum-idle: 50
+    password: "{cipher}c571e30897b590f6557d9ca681d682f3e41d3fa13979a333293906e555f90c2071efab6d9a8829d87d93b7e6c5027030"
+    url: "jdbc:sqlserver://localhost:1433;database=sis-voice;encrypt=true;trustServerCertificate=true"
+    username: "{cipher}b8a57cb62663252a5c14d41e3400db6f6aad40acdb352d133ff4290d761841e13b4f73046b46d4d6e10c72ff1ebbfa18"
+  security:
+    oauth2:
+      client:
+        provider.oidc.issuer-uri: "keycloak-url"
+        registration:
+          oidc:
+            client-id: "sistas-cc-solution"
+            client-secret: "{cipher}32ca583f8daa363295e8bc8ea1aa12221ae50bd5ec5bd9bf17993d9d1c012670"
+user-data-config:
+  cron: "0 0 * * * ?"
+  instance-name: "USER_DATA"
+  profile: "prod"
