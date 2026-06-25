@@ -392,36 +392,6 @@ logging.level.ROOT:
   rule: null
   restartRequired: false
   defaultValue: "DEBUG"
-logging.level.com.sistas.cc.conversation.logger:
-  configValueCount: "SINGLE"
-  configValueType: "STRING"
-  displayName: "Logging Level - com.sistas.cc.conversation.logger"
-  description: "Log level for ConversationLogger application package"
-  sectionName: "LOGGING"
-  encrypted: false
-  rule: null
-  restartRequired: false
-  defaultValue: "DEBUG"
-logging.level.org.hibernate.SQL:
-  configValueCount: "SINGLE"
-  configValueType: "STRING"
-  displayName: "Logging Level - org.hibernate.SQL"
-  description: "Log level for Hibernate SQL output"
-  sectionName: "LOGGING"
-  encrypted: false
-  rule: null
-  restartRequired: false
-  defaultValue: "DEBUG"
-logging.level.tech.jhipster:
-  configValueCount: "SINGLE"
-  configValueType: "STRING"
-  displayName: "Logging Level - tech.jhipster"
-  description: "Log level for tech.jhipster package"
-  sectionName: "LOGGING"
-  encrypted: false
-  rule: null
-  restartRequired: false
-  defaultValue: "DEBUG"
 not-ready-reason.default-provider:
   configValueCount: "SINGLE"
   configValueType: "STRING"
