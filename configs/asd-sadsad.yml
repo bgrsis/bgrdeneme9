@@ -1,0 +1,61 @@
+application.microservice-configuration.hazelcast.discovery-mechanism: "{cipher}9e922198e0c90c1e27c316f87de9a21b6d7feac014bca8aa04b7b19e1e327009"
+application.microservice-configuration.hazelcast.lite-member.cluster-members: "conversationlogger"
+application.microservice-configuration.hazelcast.lite-member.instance-port-padding: 5701
+application.microservice-role.aggregator: true
+application.microservice-role.raw-data: true
+application.service-time-configuration.service-time1-lower-bound: 0
+application.service-time-configuration.service-time1-upper-bound: 10
+application.service-time-configuration.service-time2-lower-bound: 10
+application.service-time-configuration.service-time2-upper-bound: 20
+application.service-time-configuration.service-time3-lower-bound: 20
+application.service-time-configuration.service-time3-upper-bound: 30
+application.service-time-configuration.service-time4-lower-bound: 30
+application.service-time-configuration.service-time4-upper-bound: 60
+application.task-executor-properties.core-size: 4
+application.task-executor-properties.maximum-size: 6
+application.task-executor-properties.queue-capacity: 1000000
+cron-job.initialize-agent-aggregation-15-min-cron: "0 6/15 * * * ?"
+cron-job.initialize-agent-session-aggregation-15-min-cron: "0 4/15 * * * ?"
+cron-job.initialize-agent-sub-type-aggregation-15-min-cron: "0 8/15 * * * ?"
+cron-job.initialize-queue-aggregation-15-min-cron: "0 7/15 * * * ?"
+eureka.client.service-url.defaultZone: "{cipher}d2bea6ae73a5e0404140be658eac437ad6b0a8bfe928b6d8aeb3598eb17e2380a2db8497b47c9467d7b32b3a2f707b62ebf27da4490af4b92e37c994214f241d"
+jhipster.security.oauth2.audience:
+- "account"
+- "api://default"
+- "sistas-chatbot"
+- "sistas-eva"
+- "sistas-voice"
+kafka.agentMessageTopic: "AGENT_MESSAGE_TOPIC"
+kafka.bootstrap-servers: "localhost:9092"
+kafka.callMessageTopic: "CALL_MESSAGE_TOPIC"
+kafka.consumer.auto.offset.reset: "latest"
+kafka.consumer.group.id: "conversation-logger"
+kafka.different-group-id-consumer.auto.offset.reset: "latest"
+kafka.different-group-id-consumer.group.id: "conversation-logger-${spring.application.instance-id:${random.value}}"
+kafka.fromConversationLoggerToMediaProcessorTopic: "FROM_CONVERSATION_LOGGER_TO_MEDIA_PROCESSOR_TOPIC"
+kafka.fromMediaProcessorToConversationLoggerTopic: "FROM_MEDIA_PROCESSOR_TO_CONVERSATION_LOGGER_TOPIC"
+kafka.generalMessageTopic: "GENERAL_MESSAGE_TOPIC"
+kafka.sendAckTimeoutSeconds: 10
+kafka.sendRetryDelaySeconds: 2
+kafka.sendRetrySchedulerThreads: 8
+kafka.topics.number-of-partitions: 1
+kafka.topics.replication-factor: 1
+logging.level.ROOT: "DEBUG"
+logging.level.com.sistas.cc.conversation.logger: "DEBUG"
+logging.level.org.hibernate.ASQL.selam: "TRACE"
+logging.level.org.hibernate.SQL: "DEBUG"
+logging.level.tech.jhipster: "DEBUG"
+not-ready-reason.default-provider: "sisphone"
+server.port: 26083
+spring.cloud.stream.kafka.binder.brokers: "localhost:9092"
+spring.datasource.hikari.maximum-pool-size: 500
+spring.datasource.hikari.minimum-idle: 50
+spring.datasource.password: "{cipher}0becf5c6c2eb0795bf71a54015faabf71788968ef78d00f0cd9d26f7dae8a80b9f607b699230cee1aa5893507fd4955c"
+spring.datasource.url: "jdbc:sqlserver://localhost:1433;database=sis-voice;encrypt=true;trustServerCertificate=true"
+spring.datasource.username: "{cipher}472e829ca073701d31c7e92559506b7ac34aa7e6a294f2ca4714877b8258eda770e40c91e8b255454e430833581e7745"
+spring.security.oauth2.client.provider.oidc.issuer-uri: "keycloak-url"
+spring.security.oauth2.client.registration.oidc.client-id: "sistas-cc-solution"
+spring.security.oauth2.client.registration.oidc.client-secret: "{cipher}1b28970f48878820e11939fd91164f37a92a5fc2b5309ba977e2d045f9162569"
+user-data-config.cron: "0 0 * * * ?"
+user-data-config.instance-name: "USER_DATA"
+user-data-config.profile: "prod"
