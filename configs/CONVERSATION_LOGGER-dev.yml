@@ -92,7 +92,7 @@ spring:
       maximum-pool-size: 500
       minimum-idle: 50
     password: "{cipher}27a0d75ac7a16041e8b351564688c4580d6c54c159ccc5cf86cb037fe2026bad239301654e6f3074b519beafd0ac738c"
-    url: "jdbc:sqlserver://localhost:1433;database=sis-voice;encrypt=true;trustServerCertificate=true"
+    url: "jdbc:sqlserver://localhost:1433;database=aasis-voice;encrypt=true;trustServerCertificate=true"
     username: "{cipher}1b7df9461ee785727c8e475d255bee87a542204d91520c73b4cb1ff7f70df2b55618b3a9934e3cca037a0de63f419b7b"
   security:
     oauth2:
