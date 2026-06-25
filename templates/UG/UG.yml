@@ -1,0 +1,161 @@
+ApplicationConfig.AccessToken:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Access Token"
+  description: "Shared access token required by gateway APIs"
+  sectionName: "APPLICATION"
+  encrypted: true
+  rule: null
+  restartRequired: false
+  defaultValue: "SistasUniversalGateway"
+ApplicationConfig.ApplicationName:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Application Name"
+  description: "Logical application instance name used for service identity"
+  sectionName: "APPLICATION"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "SistasUniversalGateway"
+ApplicationConfig.HealthConfig.KafkaHealthCheckEnabled:
+  configValueCount: "SINGLE"
+  configValueType: "BOOLEAN"
+  displayName: "Kafka Health Check Enabled"
+  description: "Enables periodic Kafka health probing"
+  sectionName: "HEALTH"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: true
+ApplicationConfig.HealthConfig.VoiceServerHealthCheckEnabled:
+  configValueCount: "SINGLE"
+  configValueType: "BOOLEAN"
+  displayName: "Voice Server Health Check Enabled"
+  description: "Enables Voice Server health probing"
+  sectionName: "HEALTH"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: true
+ApplicationConfig.PublicBaseUrl:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Public Base URL"
+  description: "Public externally reachable application origin used when generating\
+    \ links"
+  sectionName: "APPLICATION"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "http://localhost:4300"
+ApplicationConfig.SipEndpointConfig.SIPListenIpAddress:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "SIP Listen IP Address"
+  description: "Network interface that SIP endpoint listens on"
+  sectionName: "SIP"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "0.0.0.0"
+ApplicationConfig.SipEndpointConfig.SIPListenPort:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "SIP Listen Port"
+  description: "UDP/TCP port the SIP stack binds to"
+  sectionName: "SIP"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: 5080
+Serilog.MinimumLevel.Default:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Serilog Minimum Level - Default"
+  description: "Default minimum log level for all sources unless overridden"
+  sectionName: "LOGGING"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "Information"
+Serilog.MinimumLevel.Override.Microsoft.Extensions.Diagnostics.HealthChecks:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Log Level - Microsoft.Extensions.Diagnostics.HealthChecks"
+  description: "Log level for Microsoft health check framework"
+  sectionName: "LOGGING"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "Error"
+Serilog.MinimumLevel.Override.Microsoft.Hosting.Lifetime:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Log Level - Microsoft.Hosting.Lifetime"
+  description: "Log level for ASP.NET Core hosting lifetime events"
+  sectionName: "LOGGING"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "Error"
+Serilog.MinimumLevel.Override.SIPSorcery:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Log Level - SIPSorcery"
+  description: "Log level for the SIPSorcery SIP stack"
+  sectionName: "LOGGING"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "Error"
+Serilog.MinimumLevel.Override.System.Net.Http:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Log Level - System.Net.Http"
+  description: "Log level for HTTP client diagnostics"
+  sectionName: "LOGGING"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "Fatal"
+Serilog.MinimumLevel.Override.sistas.universalgateway.service.SbcRtpRelay:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Log Level - SbcRtpRelay"
+  description: "Log level for SBC RTP relay"
+  sectionName: "LOGGING"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "Verbose"
+Serilog.MinimumLevel.Override.sistas.universalgateway.service.SbcTransportManager:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Log Level - SbcTransportManager"
+  description: "Log level for SBC transport manager"
+  sectionName: "LOGGING"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "Verbose"
+Serilog.MinimumLevel.Override.sistas.universalgateway.service.WebRTCEndpointService:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Log Level - WebRTCEndpointService"
+  description: "Log level for WebRTC endpoint service"
+  sectionName: "LOGGING"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "Verbose"
+Serilog.MinimumLevel.Override.sistas.universalgateway.service.healthcheck.SipRecPeersHealthCheckService:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Log Level - SipRecPeersHealthCheckService"
+  description: "Log level for SIPREC peers health check service"
+  sectionName: "LOGGING"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "Debug"
