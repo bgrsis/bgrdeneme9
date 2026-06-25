@@ -80,11 +80,11 @@ spring:
   security:
     oauth2:
       client:
-        provider.oidc.issuer-uri: "keycloak-url"
+        provider.oidc.issuer-uri: "http://localhost:9080/realms/sistas"
         registration:
           oidc:
-            client-id: "sistas-cc-solution"
-            client-secret: "{cipher}458eca916033a9deb10c933242ce051707e966ff3e2e495eda8b489be6388d46"
+            client-id: "sistas-voice"
+            client-secret: "{cipher}87d686b0057d048a307c764ee3e1bdde6cf72e4d2f6cb3fd91edb4697f93225ee460b0ff53b2527bccec35130dc41300d6ddfe004b4277dfc0bc4050d39302f9"
 user-data-config:
   cron: "0 0 * * * ?"
   instance-name: "USER_DATA"
