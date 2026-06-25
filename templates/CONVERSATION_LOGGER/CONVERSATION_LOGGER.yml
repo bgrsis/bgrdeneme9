@@ -4,7 +4,7 @@ application.microservice-configuration.hazelcast.discovery-mechanism:
   displayName: "Hazelcast Discovery Mechanism"
   description: "Hazelcast cluster discovery mechanism"
   sectionName: "HAZELCAST"
-  encrypted: false
+  encrypted: true
   rule: null
   restartRequired: true
   defaultValue: "lite_member"
