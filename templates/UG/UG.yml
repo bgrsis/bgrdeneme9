@@ -412,6 +412,16 @@ logging.level.org.hibernate.SQL:
   rule: null
   restartRequired: false
   defaultValue: "DEBUG"
+logging.level.org.hibernate.SQL.selam:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Logging Level - org.hibernate.SQL.selam"
+  description: "Test: deeper child under existing SQL logger"
+  sectionName: "LOGGING"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "TRACE"
 logging.level.tech.jhipster:
   configValueCount: "SINGLE"
   configValueType: "STRING"
