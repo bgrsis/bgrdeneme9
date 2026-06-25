@@ -1,0 +1,32 @@
+ApplicationConfig:
+  AccessToken: "{cipher}50fdd86069810a5ec4e07d40f95c5b266d9075d9983fa3e42e4fe232a31b32745d44766a204eddc57d7136f9e916ad01"
+  ApplicationName: "SistasUniversalGateway"
+  HealthConfig:
+    KafkaHealthCheckEnabled: true
+    VoiceServerHealthCheckEnabled: true
+  PublicBaseUrl: "http://localhost:4300"
+  SipEndpointConfig:
+    SIPListenIpAddress: "0.0.0.0"
+    SIPListenPort: 5080
+Serilog:
+  MinimumLevel:
+    Default: "Information"
+    Override:
+      Microsoft:
+        Extensions:
+          Diagnostics:
+            HealthChecks: "Error"
+        Hosting:
+          Lifetime: "Error"
+      SIPSorcery: "Error"
+      System:
+        Net:
+          Http: "Fatal"
+      sistas:
+        universalgateway:
+          service:
+            SbcRtpRelay: "Verbose"
+            SbcTransportManager: "Verbose"
+            WebRTCEndpointService: "Verbose"
+            healthcheck:
+              SipRecPeersHealthCheckService: "Debug"
