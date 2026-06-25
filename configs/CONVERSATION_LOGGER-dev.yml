@@ -60,10 +60,10 @@ kafka:
     replication-factor: 1
 logging:
   level:
-    ROOT: "DEBUG"
-    com.sistas.cc.conversation.logger: "DEBUG"
-    org.hibernate.SQL: "DEBUG"
-    tech.jhipster: "DEBUG"
+    ROOT: "INFO"
+    com.sistas.cc.conversation.logger: "INFO"
+    org.hibernate.SQL: "INFO"
+    tech.jhipster: "INFO"
 not-ready-reason:
   default-provider: "sisphone"
 server:
