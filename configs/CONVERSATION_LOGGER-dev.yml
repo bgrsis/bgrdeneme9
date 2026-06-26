@@ -2,13 +2,13 @@ application:
   keycloak-admin:
     app-realm-id: "sistas"
     app-resource-id: "sistas-voice"
-    app-resource-secret: "{cipher}cd094cdcc9d943c1e778ddefb36d3e516732787183892bc5c3e8219637efb8c1"
+    app-resource-secret: "{cipher}2c6b732c830cfcd5e015f489bd725fd5edd310fed58ed9fe1624a243b16d0f29c4a43b99c928ec3cd353633516e7534a8a481a0bb08607b462f0f1e9b02c63f0"
     client-id: "admin-cli"
     max-pool-size: 10
-    password: "{cipher}5bddee2a1e6d389e2f859b87d33bccb4ec89199b588ac2d6ea1d00fff390c3f98a240e4f38d51be7fd99a4995c771f85"
+    password: "{cipher}054071e6eac9b175dc3db26ad0c941b984e09f57d9a7b484dd73250cf99d1015"
     realm: "master"
     server-url: "keycloak-url"
-    username: "{cipher}c36caed4145659abbe3a2a88171957463dd3a2ffeb6493a2ad66fe8728dd341032c425fad85f707db82152bafaa30c62"
+    username: "{cipher}581158b7642ef3244a73c134bf4b5fddbb61a174dcc6326cf0cb37c6dd0a1a36"
   microservice-configuration:
     hazelcast:
       discovery-mechanism: "lite_member"
@@ -45,7 +45,7 @@ jhipster:
     allow-credentials: true
     allowed-headers: "*"
     allowed-methods: "*"
-    allowed-origins: "url"
+    allowed-origins: "http://localhost:8100,http://localhost:9000,http://localhost:26080,https://localhost:26080,https://localhost:8050,http://localhost:8050"
     exposed-headers: "Authorization,Link,X-Total-Count,X-${jhipster.clientApp.name}-alert,X-${jhipster.clientApp.name}-error,X-${jhipster.clientApp.name}-params"
     max-age: 1800
   security:
@@ -108,9 +108,9 @@ spring:
     hikari:
       maximum-pool-size: 500
       minimum-idle: 50
-    password: "{cipher}d2b077849409a4e1126a2ae66ff04731f29a97b7da6ebd4b793c664d4f7a223ed9460aa5bc1d58592c84b098767b11d8"
-    url: "jdbc:sqlserver://localhost:1433;database=sis-voice;encrypt=true;trustServerCertificate=true"
-    username: "{cipher}5add3ef94d96471e359b2fecf9237111c7a3acc4f2c738bb5963f2497ae47c70790089b2d5a147f0d5fd4878c4886668"
+    password: "{cipher}2ede24b0542de2e16d727f32f81ffa05599151eecfe2bbc669aad13a0695f1b4"
+    url: "jdbc:sqlserver://localhost:1433;database=Test04-SisVoiceCC;encrypt=true;trustServerCertificate=true"
+    username: "{cipher}477613f4f0b8859d8e261a2d448f8695c662e1a2a85c602b9e38e7709d8f31c3"
 user-data-config:
   cron: "0 0 * * * ?"
   instance-name: "USER_DATA"
