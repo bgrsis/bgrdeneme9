@@ -35,7 +35,7 @@ jhipster:
     allow-credentials: true
     allowed-headers: "*"
     allowed-methods: "*"
-    allowed-origins: "url"
+    allowed-origins: "http://localhost:26080,https://localhost:26080,http://localhost:8080,http://localhost:8050,https://localhost:8050,https://localhost:8080"
     exposed-headers: "Authorization,Link,X-Total-Count,X-${jhipster.clientApp.name}-alert,X-${jhipster.clientApp.name}-error,X-${jhipster.clientApp.name}-params"
     max-age: 1800
   security:
@@ -99,18 +99,18 @@ spring:
       maximum-pool-size: 500
       minimum-idle: 50
     password: "{cipher}e14428facaf8c39304d51a5fe4d88e9254a95fb9ff5a3817474649c1ac8b06e2f2e229b1c0fd10c3f9e742733b72b67d"
-    url: "jdbc:sqlserver://localhost:1433;database=sis-voice;encrypt=true;trustServerCertificate=true"
+    url: "jdbc:sqlserver://localhost:1433;database=Test04-SisVoiceCC;encrypt=true;trustServerCertificate=true"
     username: "{cipher}8e6d470ad82c4b658c3a90d69f6c575e7a9c77c27c81ebb1cc191c43a1633bbe4c9c64be5fcba0772a55b12f51b3f55d"
   security:
     oauth2:
       client:
         provider:
           oidc:
-            issuer-uri: "keycloak-url"
+            issuer-uri: "http://localhost:9080"
         registration:
           oidc:
-            client-id: "sistas-cc-solution"
-            client-secret: "{cipher}7da56f2cc3a604aedc347b20f43a4c0a5c973ec90aa5750580eb4ab46ab7e55f"
+            client-id: "sistas-voice"
+            client-secret: "{cipher}2c3e841aabcbdd482adb3c5c51ad1872f28309ce00bad0a5d4f4d0a8d35a5ed8026885e56215474a47a0769dff4cde98d1f4245787c6446204e7ea41eec15a6b"
 user-data-config:
   cron: "0 0 * * * ?"
   instance-name: "USER_DATA"
