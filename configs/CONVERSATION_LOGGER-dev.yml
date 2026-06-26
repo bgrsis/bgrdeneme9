@@ -7,7 +7,7 @@ application:
     max-pool-size: 10
     password: "{cipher}054071e6eac9b175dc3db26ad0c941b984e09f57d9a7b484dd73250cf99d1015"
     realm: "master"
-    server-url: "keycloak-url"
+    server-url: "http://localhost:9080"
     username: "{cipher}581158b7642ef3244a73c134bf4b5fddbb61a174dcc6326cf0cb37c6dd0a1a36"
   microservice-configuration:
     hazelcast:
