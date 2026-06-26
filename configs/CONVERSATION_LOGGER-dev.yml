@@ -44,11 +44,17 @@ kafka:
   bootstrap-servers: "localhost:9092"
   callMessageTopic: "CALL_MESSAGE_TOPIC"
   consumer:
-    auto.offset.reset: "latest"
-    group.id: "conversation-logger"
+    auto:
+      offset:
+        reset: "latest"
+    group:
+      id: "conversation-logger"
   different-group-id-consumer:
-    auto.offset.reset: "latest"
-    group.id: "conversation-logger-${spring.application.instance-id:${random.value}}"
+    auto:
+      offset:
+        reset: "latest"
+    group:
+      id: "conversation-logger-${spring.application.instance-id:${random.value}}"
   fromConversationLoggerToMediaProcessorTopic: "FROM_CONVERSATION_LOGGER_TO_MEDIA_PROCESSOR_TOPIC"
   fromMediaProcessorToConversationLoggerTopic: "FROM_MEDIA_PROCESSOR_TO_CONVERSATION_LOGGER_TOPIC"
   generalMessageTopic: "GENERAL_MESSAGE_TOPIC"
@@ -61,15 +67,26 @@ kafka:
 logging:
   level:
     ROOT: "INFO"
-    com.sistas.cc.conversation.logger: "INFO"
-    org.hibernate.SQL: "INFO"
-    tech.jhipster: "INFO"
+    com:
+      sistas:
+        cc:
+          conversation:
+            logger: "INFO"
+    org:
+      hibernate:
+        SQL: "INFO"
+    tech:
+      jhipster: "INFO"
 not-ready-reason:
   default-provider: "sisphone"
 server:
   port: 26083
 spring:
-  cloud.stream.kafka.binder.brokers: "localhost:9092"
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: "localhost:9092"
   datasource:
     hikari:
       maximum-pool-size: 500
@@ -80,7 +97,9 @@ spring:
   security:
     oauth2:
       client:
-        provider.oidc.issuer-uri: "http://localhost:9080/realms/sistas"
+        provider:
+          oidc:
+            issuer-uri: "http://localhost:9080/realms/sistas"
         registration:
           oidc:
             client-id: "sistas-voice"
