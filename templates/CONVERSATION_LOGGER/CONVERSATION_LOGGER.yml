@@ -4,7 +4,7 @@ application.microservice-configuration.hazelcast.discovery-mechanism:
   displayName: "Hazelcast Discovery Mechanism"
   description: "Hazelcast cluster discovery mechanism"
   sectionName: "HAZELCAST"
-  encrypted: true
+  encrypted: false
   rule: null
   restartRequired: true
   defaultValue: "lite_member"
@@ -217,6 +217,66 @@ eureka.client.service-url.defaultZone:
   rule: null
   restartRequired: true
   defaultValue: "http://USERNAME:PASSWORD@localhost:8761/eureka/"
+jhipster.cors.allow-credentials:
+  configValueCount: "SINGLE"
+  configValueType: "BOOLEAN"
+  displayName: "CORS Allow Credentials"
+  description: "Whether browsers should send credentials with CORS requests"
+  sectionName: "CORS"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: true
+jhipster.cors.allowed-headers:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "CORS Allowed Headers"
+  description: "HTTP headers allowed for CORS requests"
+  sectionName: "CORS"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "*"
+jhipster.cors.allowed-methods:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "CORS Allowed Methods"
+  description: "HTTP methods allowed for CORS requests"
+  sectionName: "CORS"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "*"
+jhipster.cors.allowed-origins:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "CORS Allowed Origins"
+  description: "Allowed origins for CORS requests"
+  sectionName: "CORS"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "url"
+jhipster.cors.exposed-headers:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "CORS Exposed Headers"
+  description: "HTTP response headers exposed to CORS clients"
+  sectionName: "CORS"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "Authorization,Link,X-Total-Count,X-${jhipster.clientApp.name}-alert,X-${jhipster.clientApp.name}-error,X-${jhipster.clientApp.name}-params"
+jhipster.cors.max-age:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "CORS Max Age (seconds)"
+  description: "Maximum cache lifetime in seconds for CORS preflight responses"
+  sectionName: "CORS"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: 1800
 jhipster.security.oauth2.audience:
   configValueCount: "LIST"
   configValueType: "STRING"
@@ -387,6 +447,36 @@ logging.level.ROOT:
   configValueType: "STRING"
   displayName: "Logging Level - ROOT"
   description: "Root logger level (DEBUG / INFO / WARN / ERROR)"
+  sectionName: "LOGGING"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "DEBUG"
+logging.level.com.sistas.cc.conversation.logger:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Logging Level - com.sistas.cc.conversation.logger"
+  description: "Log level for ConversationLogger application package"
+  sectionName: "LOGGING"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "DEBUG"
+logging.level.org.hibernate.SQL:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Logging Level - org.hibernate.SQL"
+  description: "Log level for Hibernate SQL output"
+  sectionName: "LOGGING"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "DEBUG"
+logging.level.tech.jhipster:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Logging Level - tech.jhipster"
+  description: "Log level for tech.jhipster package"
   sectionName: "LOGGING"
   encrypted: false
   rule: null
